@@ -1,0 +1,13 @@
+pyttsx3 #for text to speech
+pywin32 # for text to speech
+mysql-connector-python #for database stuff
+#smtplib #for speech to text
+SpeechRecognition #for speech recognition 
+wikipedia #for wikipedia searches
+wolframalpha #for wolframalpha searches
+keyboard #for keyboard inputs
+pynput #for keyboard and mouse inputs
+beautifulsoup4 #for google searches
+discord.py #to interface with discord
+python-dotenv #to open info out of a .env
+google # for google searches
