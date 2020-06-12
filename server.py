@@ -111,6 +111,7 @@ async def on_message(message):
             query = query.replace("//help", " ")
 
             if 'all' in query:
+                await message.channel.send('$//takecommand - will take your voice input')
                 await message.channel.send('$//jlaptop will mean you are interfacing with the laptop set of code {type //help jlaptop for more help}')
                 await message.channel.send('$//flaptop will mean you are interfacing with the laptop set of code {type //help flaptop for more help}')
                 await message.channel.send('$//server will mean you are interfacing with the server set of code {type //help server for more help}')
