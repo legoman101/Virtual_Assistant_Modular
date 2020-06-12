@@ -61,3 +61,5 @@ Host = \\*\\*\\*\\*\\*\\Host.py
 Run: ```pip install -r requirements.txt``` to pip install everything you need.
 Run: ```server.py``` and then go to your discord guild/server and type ```//start Flynn's-Laptop``` and ```//start Flynn's-Laptop```
 OR: run them all at the same time.
+
+NOTE: when running the ```Wiimote-typing.py``` script you need to use the command ```python Wiimote-typing.py``` and not ```python3```
