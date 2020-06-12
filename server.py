@@ -103,7 +103,7 @@ async def on_message(message):
                 FlynnsLaptop = os.getenv('FlynnsLaptop')
                 os.startfile(FlynnsLaptop)
 
-        if '//bot1end' in query or '//bot1abort' in query or '//bot1kill' in query:
+        if '//bot1end' in query or '//bot1abort' in query or '//bot1kill' in query or '!almightykill' in query:
             await message.channel.send( 'Ending Bot')
             await client.close()
                 
