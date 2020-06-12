@@ -59,7 +59,7 @@ async def on_message(message):
     if message.author == client.user:
         return
     query = message.content.lower() # saves query as the message
-    if '//' in query:
+    if message.content.startwith('//'):
         if '//jlaptop' in query or '//jcomputer' in query:
             query = query.replace('//jlaptop', '')
             query = query.replace('//jcomputer', '')
@@ -215,7 +215,7 @@ async def on_message(message):
                 os.startfile(SpotifyPath)
 #end of open commands.
 #
-        if '//bot2end' in query or '//bot2abort' in query or '//bot2kill' in query or '!almightykill' in query:
+        if '//bot2end' in query or '//bot2abort' in query or '//bot2kill' in query or '//almightykill' in query:
             await message.channel.send( 'Ending Bot')
             await client.close()
 

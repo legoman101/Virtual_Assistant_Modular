@@ -46,7 +46,7 @@ async def on_message(message):
     if message.author == client.user:
         return
     query = message.content.lower() # saves query as the message
-    if '//' in query:
+    if message.content.startwith('//'):
         if '//server' in query: #any commands aimed at the server bot
             query = query.replace("//server", "")
             #Misicalious commands
@@ -103,7 +103,7 @@ async def on_message(message):
                 FlynnsLaptop = os.getenv('FlynnsLaptop')
                 os.startfile(FlynnsLaptop)
 
-        if '//bot1end' in query or '//bot1abort' in query or '//bot1kill' in query or '!almightykill' in query:
+        if '//bot1end' in query or '//bot1abort' in query or '//bot1kill' in query or '//almightykill' in query:
             await message.channel.send( 'Ending Bot')
             await client.close()
                 
@@ -202,7 +202,7 @@ async def on_message(message):
         if '//todolist' in query:
             await message.channel.send('Get wolfram working')
             await message.channel.send('Create a clear function')
-            #await message.channel.send('change the laptopbot\'s things so that it uses !! instead of //- this means they wont accidentally interfere with each other.')
+            await message.channel.send('find a way for all the bots to ignore the helpp commands')
 
         if '//takecommand' in query:
             await message.channel.send('//host takecommand')
