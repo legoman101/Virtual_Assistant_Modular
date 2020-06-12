@@ -59,7 +59,7 @@ async def on_message(message):
     if message.author == client.user:
         return
     query = message.content.lower() # saves query as the message
-    if message.content.startwith('//'):
+    if message.content.startswith('//'):
         if '//jlaptop' in query or '//jcomputer' in query:
             query = query.replace('//jlaptop', '')
             query = query.replace('//jcomputer', '')

@@ -46,7 +46,7 @@ async def on_message(message):
     if message.author == client.user:
         return
     query = message.content.lower() # saves query as the message
-    if message.content.startwith('//'):
+    if message.content.startswith('//'):
         if '//server' in query: #any commands aimed at the server bot
             query = query.replace("//server", "")
             #Misicalious commands
