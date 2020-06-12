@@ -117,7 +117,7 @@ async def on_message(message):
                 await message.channel.send('$//bot{1/2/3}end, //bot{1/2/3}kill or //bot{1/2/3}abort will close the discord bot -[bot1 = server, bot2 = JLaptop, bot3 = FLaptop] {WARNING: this will mean that you will have to reload the bot with the code}')
                 await message.channel.send('$//say will make my laptop say what ever you type after')
                 await message.channel.send('$//help will list all of the commands (this list)')
-                await messaege.channel.send('$//almightykill will close all of the bots- {WARNING: this will mean that you will have to reload the bot with the code}')
+                await message.channel.send('$//almightykill will close all of the bots- {WARNING: this will mean that you will have to reload the bot with the code}')
 
             if 'server' in query:
                 await message.channel.send('$//server hello - says hello back')
@@ -203,8 +203,8 @@ async def on_message(message):
 
         if '//todolist' in query:
             await message.channel.send('Get wolfram working')
+            await message.channel.send('find a way to get a voice input and tunr it into the command')
             await message.channel.send('Create a clear function')
-            await message.channel.send('find a way for all the bots to ignore the helpp commands')
 
         if '//takecommand' in query:
             await message.channel.send('//host takecommand')
