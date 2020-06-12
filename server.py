@@ -111,89 +111,91 @@ async def on_message(message):
             query = query.replace("//help", " ")
 
             if 'all' in query:
-                await message.channel.send('//laptop will mean you are interfacing with the laptop set of code {type //help laptop for more help}')
-                await message.channel.send('//server will mean you are interfacing with the server set of code {type //help server for more help}')
-                await message.channel.send('//end, //kill or //abort will close the discord bot - {WARNING: this will mean that you will have to reload the bot with the code}')
-                await message.channel.send('//say will make my laptop say what ever you type after')
-                await message.channel.send('//help will list all of the commands (this list)')
+                await message.channel.send('$//jlaptop will mean you are interfacing with the laptop set of code {type //help jlaptop for more help}')
+                await message.channel.send('$//flaptop will mean you are interfacing with the laptop set of code {type //help flaptop for more help}')
+                await message.channel.send('$//server will mean you are interfacing with the server set of code {type //help server for more help}')
+                await message.channel.send('$//bot{1/2/3}end, //bot{1/2/3}kill or //bot{1/2/3}abort will close the discord bot -[bot1 = server, bot2 = JLaptop, bot3 = FLaptop] {WARNING: this will mean that you will have to reload the bot with the code}')
+                await message.channel.send('$//say will make my laptop say what ever you type after')
+                await message.channel.send('$//help will list all of the commands (this list)')
+                await messaege.channel.send('$//almightykill will close all of the bots- {WARNING: this will mean that you will have to reload the bot with the code}')
 
             if 'server' in query:
-                await message.channel.send('//server hello - says hello back')
-                await message.channel.send('//server greet - says good morning/afternoon/evening depending on the time')
-                await message.channel.send('//server time - sends the current time')
-                await message.channel.send('//server your info - will return information about the virtual assistant')
-                await message.channel.send('//server my info - will returninformation about the user')
-                await message.channel.send('//server what\'s up - will return how the virtual assistant is feeling today')
-                await message.channel.send('//server how are you - will return how the virtual assistant is feeling today')
-                await message.channel.send('//bot1end, //bot1kill, //bot1abort - will end the program for the server bot')
-                await message.channel.send('//start {joshslaptopbot/flynnslaptopbot/managerbot/hostbot} - will start the python script for the appropriate bot [WARNING: make sure you keep the python tab OPEN]')
-                await message.channel.send('//clear {x amount of messages} - deletes x amount of messages')
+                await message.channel.send('$//server hello - says hello back')
+                await message.channel.send('$//server greet - says good morning/afternoon/evening depending on the time')
+                await message.channel.send('$//server time - sends the current time')
+                await message.channel.send('$//server your info - will return information about the virtual assistant')
+                await message.channel.send('$//server my info - will returninformation about the user')
+                await message.channel.send('$//server what\'s up - will return how the virtual assistant is feeling today')
+                await message.channel.send('$//server how are you - will return how the virtual assistant is feeling today')
+                await message.channel.send('$//bot1end, //bot1kill, //bot1abort - will end the program for the server bot')
+                await message.channel.send('$//start {joshslaptopbot/flynnslaptopbot/managerbot/hostbot} - will start the python script for the appropriate bot [WARNING: make sure you keep the python tab OPEN]')
+                await message.channel.send('$//clear {x amount of messages} - deletes x amount of messages')
                 
             if 'jlaptop' in query:
                 
                 #misc
-                await message.channel.send('//bot2end, //bot2end, //bot2end - will end the program for the laptop bot')
+                await message.channel.send('$//bot2end, //bot2end, //bot2end - will end the program for the laptop bot')
                 
                 #search
-                await message.channel.send('//laptop gotowebpage {the webpage you want to go to}- this will open the webpage on MY laptop')
-                await message.channel.send('//laptop google search {search } - will return the first URL from a google search of that thing')
-                await message.channel.send('//laptop search {search } - will return the first URL from a google search of that thing')
-                await message.channel.send('//laptop wolfram {search } - will search wolfram fro that thing (currently not working)')
-                await message.channel.send('//laptop wikipedia {search} - will search wikipedia for that thing and return the first 2 lines of the wikipedia page')
+                await message.channel.send('$//laptop gotowebpage {the webpage you want to go to}- this will open the webpage on MY laptop')
+                await message.channel.send('$//laptop google search {search } - will return the first URL from a google search of that thing')
+                await message.channel.send('$//laptop search {search } - will return the first URL from a google search of that thing')
+                await message.channel.send('$//laptop wolfram {search } - will search wolfram fro that thing (currently not working)')
+                await message.channel.send('$//laptop wikipedia {search} - will search wikipedia for that thing and return the first 2 lines of the wikipedia page')
                 
                 #music
-                await message.channel.send('//laptop play music - will play music from a pre-determined folder')
-                await message.channel.send('//laptop press play - will press the play/pause media button')
-                await message.channel.send('//laptop press pause - will press the play/pause media button')
-                await message.channel.send('//laptop play random music - will play random music in shuffle from a pre-determined folder')
+                await message.channel.send('$//laptop play music - will play music from a pre-determined folder')
+                await message.channel.send('$//laptop press play - will press the play/pause media button')
+                await message.channel.send('$//laptop press pause - will press the play/pause media button')
+                await message.channel.send('$//laptop play random music - will play random music in shuffle from a pre-determined folder')
                 
                 #email
-                await message.channel.send('//laptop email {recipient(me/coding)} {content}')
+                await message.channel.send('$//laptop email {recipient(me/coding)} {content}')
 
                 #open
-                await message.channel.send('//laptop open youtube - opens youtube')
-                await message.channel.send('//laptop open gmail - opens gmail')
-                await message.channel.send('//laptop open github - opens github')
-                await message.channel.send('//laptop open google - opens google')
-                await message.channel.send('//laptop open stack overflow - opens stackoverflow')
-                await message.channel.send('//laptop open disney+ - opens disney+')
-                await message.channel.send('//laptop open vscode - opens Visual Studio Code')
-                await message.channel.send('//laptop open python - opens python')
-                await message.channel.send('//laptop open android studio - opens android studio')
-                await message.channel.send('//laptop open spotify - opens spotify')
-                await message.channel.send('//laptop open api reference - opens the Discord.py API reference')
-                await message.channel.send('//laptop open discord dev portal - opens the Discord bot development portal')
+                await message.channel.send('$//laptop open youtube - opens youtube')
+                await message.channel.send('$//laptop open gmail - opens gmail')
+                await message.channel.send('$//laptop open github - opens github')
+                await message.channel.send('$//laptop open google - opens google')
+                await message.channel.send('$//laptop open stack overflow - opens stackoverflow')
+                await message.channel.send('$//laptop open disney+ - opens disney+')
+                await message.channel.send('$//laptop open vscode - opens Visual Studio Code')
+                await message.channel.send('$//laptop open python - opens python')
+                await message.channel.send('$//laptop open android studio - opens android studio')
+                await message.channel.send('$//laptop open spotify - opens spotify')
+                await message.channel.send('$//laptop open api reference - opens the Discord.py API reference')
+                await message.channel.send('$//laptop open discord dev portal - opens the Discord bot development portal')
         
             if 'flaptop' in query:
                 
                 #misc
-                await message.channel.send('//bot3end, //bot3end, //bot3end - will end the program for the laptop bot')
+                await message.channel.send('$//bot3end, //bot3end, //bot3end - will end the program for the laptop bot')
                 
                 #search
-                await message.channel.send('//laptop gotowebpage {the webpage you want to go to}- this will open the webpage on MY laptop')
-                await message.channel.send('//laptop google search {search } - will return the first URL from a google search of that thing')
-                await message.channel.send('//laptop search {search } - will return the first URL from a google search of that thing')
-                await message.channel.send('//laptop wolfram {search } - will search wolfram fro that thing (currently not working)')
-                await message.channel.send('//laptop wikipedia {search} - will search wikipedia for that thing and return the first 2 lines of the wikipedia page')
+                await message.channel.send('$//laptop gotowebpage {the webpage you want to go to}- this will open the webpage on MY laptop')
+                await message.channel.send('$//laptop google search {search } - will return the first URL from a google search of that thing')
+                await message.channel.send('$//laptop search {search } - will return the first URL from a google search of that thing')
+                await message.channel.send('$//laptop wolfram {search } - will search wolfram fro that thing (currently not working)')
+                await message.channel.send('$//laptop wikipedia {search} - will search wikipedia for that thing and return the first 2 lines of the wikipedia page')
                 
                 #music
-                await message.channel.send('//laptop play music - will play music from a pre-determined folder')
-                await message.channel.send('//laptop press play - will press the play/pause media button')
-                await message.channel.send('//laptop press pause - will press the play/pause media button')
-                await message.channel.send('//laptop play random music - will play random music in shuffle from a pre-determined folder')
+                await message.channel.send('$//laptop play music - will play music from a pre-determined folder')
+                await message.channel.send('$//laptop press play - will press the play/pause media button')
+                await message.channel.send('$//laptop press pause - will press the play/pause media button')
+                await message.channel.send('$//laptop play random music - will play random music in shuffle from a pre-determined folder')
                 
                 #email
-                await message.channel.send('//laptop email {recipient(me/coding)} {content}')
+                await message.channel.send('$//laptop email {recipient(me/coding)} {content}')
 
                 #open
-                await message.channel.send('//laptop open youtube - opens youtube')
-                await message.channel.send('//laptop open gmail - opens gmail')
-                await message.channel.send('//laptop open github - opens github')
-                await message.channel.send('//laptop open google - opens google')
-                await message.channel.send('//laptop open stack overflow - opens stackoverflow')
-                await message.channel.send('//laptop open vscode - opens Visual Studio Code')
-                await message.channel.send('//laptop open python - opens python')
-                await message.channel.send('//laptop open spotify - opens spotify')
+                await message.channel.send('$//laptop open youtube - opens youtube')
+                await message.channel.send('$//laptop open gmail - opens gmail')
+                await message.channel.send('$//laptop open github - opens github')
+                await message.channel.send('$//laptop open google - opens google')
+                await message.channel.send('$//laptop open stack overflow - opens stackoverflow')
+                await message.channel.send('$//laptop open vscode - opens Visual Studio Code')
+                await message.channel.send('$//laptop open python - opens python')
+                await message.channel.send('$//laptop open spotify - opens spotify')
         
         if '//return' in query:
             query = query.replace("return ", "")
