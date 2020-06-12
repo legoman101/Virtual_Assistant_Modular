@@ -10,7 +10,7 @@ import os # to open programs
 import sys # to use the system
 import time #so you can wait
 from googlesearch import search  # to search google for things
-import speech_recognition as sr
+import speech_recognition as s_r
 
 load_dotenv()
 
@@ -30,26 +30,6 @@ def printspeak(text):
     engine.say(text)
     engine.runAndWait()
 
-'''
-def myCommand():
-   
-    r = sr.Recognizer()                                                                                   
-    with sr.Microphone() as source:
-        printspeak("Listening...")
-        #r.pause_threshold =  1
-        audio = r.listen(source) #listen for input
-    try:
-        query = r.recognize(audio) #query = the words from the recording
-        print('User: ' + query + '\n') # print User said: (and then the words from the recording)
-        
-    except Exception as e: #If it cant understand it, then it will ask for a typed input.
-        printspeak(f'Sorry {MASTER} I didn\'t get that! Try typing the command!')
-        query = str(input('Command: '))
-
-    return query
-'''
-
-
 @client.event
 async def on_ready():
     print(f'{client.user.name} has connected to Discord!')
@@ -61,7 +41,15 @@ async def on_message(message):
     query = message.content.lower() # saves query as the message
     if message.content.startswith('//'):
         if '//takecommand' in query:
-            voiceinput = myCommand()
+            r = s_r.Recognizer()
+            my_mic = s_r.Microphone(device_index=1) #my device index is 1, you have to put your device index
+            with my_mic as source:
+                printspeak("Listening...")
+                await message.channel.send('Listening...')
+                r.adjust_for_ambient_noise(source) #reduce noise
+                audio = r.listen(source) #take voice input from the microphone
+            #printspeak(r.recognize_google(audio)) #to print voice into text
+            voiceinput = (r.recognize_google(audio))#voiceinput = myCommand()
             await message.channel.send('I got: ' +voiceinput)
 
         if '//bot4end' in query or '//bot4abort' in query or '//bot4kill' in query or '//almightykill' in query:
