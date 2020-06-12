@@ -13,8 +13,9 @@ import keyboard #to register a keypress
 from pynput.keyboard import Key, Controller #to use the media keys
 import pynput
 import google # to search google for things
-from Passes import * #for the Passes
+from dotenv import load_dotenv
 
+wolframappid = os.getenv('wolframappid')
 #setup pynput
 pynputkeyboard = Controller()
 

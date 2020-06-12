@@ -40,10 +40,16 @@ def myCommand():
     try:
         query = r.recognize(audio) #query = the words from the recording
         print('User: ' + query + '\n') # print User said: (and then the words from the recording)
-    
+        
+    except Exception as e: #If it cant understand it, then it will ask for a typed input.
+        printspeak(f'Sorry {MASTER} I didn\'t get that! Try typing the command!')
+        query = str(input('Command: '))
+
     return query
 
-
+@client.event
+async def on_ready():
+    print(f'{client.user.name} has connected to Discord!')
 
 @client.event
 async def on_message(message):
@@ -54,5 +60,9 @@ async def on_message(message):
         if '//takecommand' in query:
             voiceinput = myCommand()
             await message.channel.send('I got: ' +voiceinput)
+
+        if '//bot4end' in query or '//bot4abort' in query or '//bot4kill' in query or '//almightykill' in query:
+            await message.channel.send( 'Ending Bot')
+            await client.close()
 
 client.run(TOKEN) #runs the bot
