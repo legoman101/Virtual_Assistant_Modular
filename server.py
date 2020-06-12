@@ -16,7 +16,7 @@ wolframappid = os.getenv('wolframappid')
 
 load_dotenv()
 
-TOKEN = os.getenv('DISCORDSERVER_TOKEN') #token for the Laptop Bot
+TOKEN = os.getenv('DISCORDSERVER_TOKEN') #token for the server Bot
 client = discord.Client() #set the client
 query = "" #query = nothing
 
