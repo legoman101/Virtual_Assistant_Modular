@@ -10,8 +10,9 @@ import os # to open programs
 import sys # to use the system
 import time #so you can wait
 from googlesearch import search  # to search google for things
-from Passes import songs_dir #import the songs_dir from the Passes.py file
-from Passes import wolframappid #import the wolfram app id from the passes.py file
+
+songs_dir = os.getenv('songs_dir')
+wolframappid = os.getenv('wolframappid')
 
 load_dotenv()
 

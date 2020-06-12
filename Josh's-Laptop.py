@@ -24,7 +24,7 @@ load_dotenv()
 #setup pynput
 pynputkeyboard = Controller()
 
-TOKEN = os.getenv('DISCORDFLYNNLAPTOP_TOKEN') #token for the Laptop Bot
+TOKEN = os.getenv('DISCORDJOSHLAPTOP_TOKEN') #token for the Laptop Bot
 client = discord.Client() #set the client
 query = "" #query = nothing
 
@@ -56,9 +56,9 @@ async def on_message(message):
         return
     query = message.content.lower() # saves query as the message
     if '//' in query:
-        if '//flaptop' in query or '//fcomputer' in query:
-            query = query.replace('//flaptop', '')
-            query = query.replace('//fcomputer', '')
+        if '//jlaptop' in query or '//jcomputer' in query:
+            query = query.replace('//jlaptop', '')
+            query = query.replace('//jcomputer', '')
 
 #search commands
             if 'go to web page' in query or 'gotowebpage' in query:
