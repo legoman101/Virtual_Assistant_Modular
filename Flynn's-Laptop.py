@@ -16,7 +16,6 @@ import keyboard #to register a keypress
 from pynput.keyboard import Key, Controller #to use the media keys
 import pynput
 from googlesearch import search  # to search google for things
-from googlesearch import search  # to search google for things
 
 
 load_dotenv()
