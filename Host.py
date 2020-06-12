@@ -30,6 +30,7 @@ def printspeak(text):
     engine.say(text)
     engine.runAndWait()
 
+'''
 def myCommand():
    
     r = sr.Recognizer()                                                                                   
@@ -46,6 +47,8 @@ def myCommand():
         query = str(input('Command: '))
 
     return query
+'''
+
 
 @client.event
 async def on_ready():

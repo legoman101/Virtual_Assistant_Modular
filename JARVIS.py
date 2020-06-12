@@ -2,7 +2,7 @@ import pyttsx3 # for text-to-speech
 import webbrowser #for opening web pages
 import smtplib #for emailing
 import random # to pick random
-import speech_recognition as sr #for speech-to-text
+import speech_recognition as s_r #for speech-to-text
 import wikipedia #to look stuff up
 import datetime #to find the date+time
 import wolframalpha # to do maths
@@ -121,21 +121,16 @@ printspeak('Press Ctrl + F2 for me to start listening')
 
 
 def myCommand():
-   
-    r = sr.Recognizer()                                                                                   
-    with sr.Microphone() as source:
+    r = s_r.Recognizer()
+    my_mic = s_r.Microphone(device_index=1) #my device index is 1, you have to put your device index
+    with my_mic as source:
         printspeak("Listening...")
-        #r.pause_threshold =  1
-        audio = r.listen(source) #listen for input
-    try:
-        query = r.recognize(audio) #query = the words from the recording
-        print('User: ' + query + '\n') # print User said: (and then the words from the recording)
-        
-    except Exception as e: #If it cant understand it, then it will ask for a typed input.
-        printspeak(f'Sorry {MASTER} I didn\'t get that! Try typing the command!')
-        query = str(input('Command: '))
-
+        r.adjust_for_ambient_noise(source) #reduce noise
+        audio = r.listen(source) #take voice input from the microphone
+    #printspeak(r.recognize_google(audio)) #to print voice into text
+    query = (r.recognize_google(audio))
     return query
+
 
 
         
