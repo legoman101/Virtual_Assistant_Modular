@@ -34,6 +34,7 @@ engine = pyttsx3.init('sapi5')
 MASTER = 'Flynn'
 
 #wolfram setup
+wolframappid = os.getenv('wolframappid')
 wolframclient = wolframalpha.Client(wolframappid)
 
 def lowkey(text): #press a lower case key, or a key without shift added
