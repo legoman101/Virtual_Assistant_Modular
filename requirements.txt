@@ -1,6 +1,5 @@
 pyttsx3 #for text to speech
 pywin32 # for text to speech
-mysql-connector-python #for database stuff
 #smtplib #for speech to text
 SpeechRecognition #for speech recognition 
 wikipedia #for wikipedia searches
