@@ -40,11 +40,7 @@ def myCommand():
     try:
         query = r.recognize(audio) #query = the words from the recording
         print('User: ' + query + '\n') # print User said: (and then the words from the recording)
-        
-    except Exception as e: #If it cant understand it, then it will ask for a typed input.
-        printspeak(f'Sorry {MASTER} I didn\'t get that! Try typing the command!')
-        query = str(input('Command: '))
-
+    
     return query
 
 

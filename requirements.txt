@@ -11,3 +11,6 @@ beautifulsoup4 #for google searches
 discord.py #to interface with discord
 python-dotenv #to open info out of a .env
 google # for google searches
+pyAudio #if this doesnt work on windows, unhash the next line and re-has this one:
+#pipwin #if pyAudio isnt working this will install pipwin, after everything has installed, run this command:
+#pipwin install pyaudio #this will install pyaudio
