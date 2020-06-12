@@ -10,10 +10,15 @@ import os # to open programs
 import sys # to use the system
 import time #so you can wait
 from googlesearch import search  # to search google for things
+import speech_recognition as sr
+
+load_dotenv()
+
 
 TOKEN = os.getenv('DISCORDHOST_TOKEN') #token for the Host Bot
 client = discord.Client() #set the client
 query = "" #query = nothing
+
 
 #speech
 engine = pyttsx3.init('sapi5')
