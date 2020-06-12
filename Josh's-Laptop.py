@@ -50,6 +50,9 @@ def gotowebpage(text):
     chrome_path = os.getenv('chrome_path') #chrome path from the .env
     webbrowser.get(chrome_path).open(text)
 
+@client.event
+async def on_ready():
+    print(f'{client.user.name} has connected to Discord!')
 
 @client.event
 async def on_message(message):
