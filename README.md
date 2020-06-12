@@ -20,32 +20,44 @@ you need to create 4 bots: (if you want to make these a bit nicer, then you can 
 Get the four ID Tokens and put them into a file named ```.env```
 The format of this is:
 ```
+# .env
 
-DISCORDMANAGER_TOKEN = '*'
-DISCORDHOST_TOKEN = '*'
-DISCORDJOSHLAPTOP_TOKEN = '*'
-DISCORDFLYNNLAPTOP_TOKEN = '*'
-DISCORDSERVER_TOKEN = '*'
-DISCORD_GUILD = '*'
+#Discord
+DISCORDMANAGER_TOKEN = *#*
+DISCORDHOST_TOKEN = *#*
+DISCORDJOSHLAPTOP_TOKEN = *#*
+DISCORDFLYNNLAPTOP_TOKEN = *#*
+DISCORDSERVER_TOKEN = *#*
+DISCORD_GUILD = *#*
 
-```
+#Other
+wolframappid = *#*
 
-Get the app tokens for Gmail, Wolfram, and the Accounts for your email. and put them into a file named ```Passes.py```
-The format of this is:
-```
+#email
+Your_Username = *#*
+Codingemail = *#*
+Normalemail = *#*
+Your_Password = *#*
 
-#Passes.py
-#Passwords:
-wolframappid = '*'
-Your_Username = '*'
-Codingemail = '*'
-Normalemail = '*'
-our_Password = '*'
+#Paths
+songs_dir = \\*\\*\\*\\*\\*\\Music # for music playing
+ChromePath = C:/*/*/*/*/chrome.exe %s
+VsCodePath = \\*\\*\\*\\*\\*\\Visual Studio Code.lnk
+PythonPath = \\*\\*\\*\\*\\*\\IDLE (Python 3.8 32-bit).lnk
+SpotifyPath = \\*\\*\\*\\*\\*\\Spotify.lnk
+AndroidStudioPath = \\*\\*\\*\\*\\*\\Android Studio.lnk
 
-songs_dir = '//*//*//*'
+#botPaths
+JoshsLaptop = \\*\\*\\*\\*\\*\\Josh's-Laptop.py
+FlynnsLaptop = \\*\\*\\*\\*\\*\\Flynn's-Laptop.py
+Manager = \\*\\*\\*\\*\\*\\manager.py
+Server =  \\*\\*\\*\\*\\*\\server.py
+Host = \\*\\*\\*\\*\\*\\Host.py
+
+
 
 ```
 
 Run: ```pip install -r requirements.txt``` to pip install everything you need.
-Run: ```server.py|Josh's-Laptop.py|Flynn's-Laptop.py``` to start the bots.
-Alternitively: ```server.py``` and then go to your discord guild/server and type ```//start Flynn's-Laptop``` and ```//start Flynn's-Laptop```
+Run: ```server.py``` and then go to your discord guild/server and type ```//start Flynn's-Laptop``` and ```//start Flynn's-Laptop```
+OR: run them all at the same time.
