@@ -103,7 +103,7 @@ async def on_message(message):
                 FlynnsLaptop = os.getenv('FlynnsLaptop')
                 os.startfile(FlynnsLaptop)
 
-        if '//bot1end' in query or '//bot1abort' in query or '//bot1kill' in query or '//almightykill' in query:
+        if '//bot1end' in query or '//bot1abort' in query or '//bot1kill' in query or '//almightykill' in query or '//almighty kill' in query:
             await message.channel.send( 'Ending Bot')
             await client.close()
                 
@@ -132,71 +132,71 @@ async def on_message(message):
                 await message.channel.send('$//start {joshslaptopbot/flynnslaptopbot/managerbot/hostbot} - will start the python script for the appropriate bot [WARNING: make sure you keep the python tab OPEN]')
                 await message.channel.send('$//clear {x amount of messages} - deletes x amount of messages')
                 
-            if 'jlaptop' in query:
+            if 'josh laptop' in query or 'josh\'s laptop' in query:
                 
                 #misc
                 await message.channel.send('$//bot2end, //bot2end, //bot2end - will end the program for the laptop bot')
                 
                 #search
-                await message.channel.send('$//laptop gotowebpage {the webpage you want to go to}- this will open the webpage on MY laptop')
-                await message.channel.send('$//laptop google search {search } - will return the first URL from a google search of that thing')
-                await message.channel.send('$//laptop search {search } - will return the first URL from a google search of that thing')
-                await message.channel.send('$//laptop wolfram {search } - will search wolfram fro that thing (currently not working)')
-                await message.channel.send('$//laptop wikipedia {search} - will search wikipedia for that thing and return the first 2 lines of the wikipedia page')
+                await message.channel.send('$//josh\'s laptop gotowebpage {the webpage you want to go to}- this will open the webpage on MY laptop')
+                await message.channel.send('$//josh\'s laptop google search {search } - will return the first URL from a google search of that thing')
+                await message.channel.send('$//josh\'s laptop search {search } - will return the first URL from a google search of that thing')
+                await message.channel.send('$//josh\'s laptop wolfram {search } - will search wolfram fro that thing (currently not working)')
+                await message.channel.send('$//josh\'s laptop wikipedia {search} - will search wikipedia for that thing and return the first 2 lines of the wikipedia page')
                 
                 #music
-                await message.channel.send('$//laptop play music - will play music from a pre-determined folder')
-                await message.channel.send('$//laptop press play - will press the play/pause media button')
-                await message.channel.send('$//laptop press pause - will press the play/pause media button')
-                await message.channel.send('$//laptop play random music - will play random music in shuffle from a pre-determined folder')
+                await message.channel.send('$//josh\'s laptop play music - will play music from a pre-determined folder')
+                await message.channel.send('$//josh\'s laptop press play - will press the play/pause media button')
+                await message.channel.send('$//josh\'s laptop press pause - will press the play/pause media button')
+                await message.channel.send('$//josh\'s laptop play random music - will play random music in shuffle from a pre-determined folder')
                 
                 #email
-                await message.channel.send('$//laptop email {recipient(me/coding)} {content}')
+                await message.channel.send('$//josh\'s laptop email {recipient(me/coding)} {content}')
 
                 #open
-                await message.channel.send('$//laptop open youtube - opens youtube')
-                await message.channel.send('$//laptop open gmail - opens gmail')
-                await message.channel.send('$//laptop open github - opens github')
-                await message.channel.send('$//laptop open google - opens google')
-                await message.channel.send('$//laptop open stack overflow - opens stackoverflow')
-                await message.channel.send('$//laptop open disney+ - opens disney+')
-                await message.channel.send('$//laptop open vscode - opens Visual Studio Code')
-                await message.channel.send('$//laptop open python - opens python')
-                await message.channel.send('$//laptop open android studio - opens android studio')
-                await message.channel.send('$//laptop open spotify - opens spotify')
-                await message.channel.send('$//laptop open api reference - opens the Discord.py API reference')
-                await message.channel.send('$//laptop open discord dev portal - opens the Discord bot development portal')
+                await message.channel.send('$//josh\'s laptop open youtube - opens youtube')
+                await message.channel.send('$//josh\'s laptop open gmail - opens gmail')
+                await message.channel.send('$//josh\'s laptop open github - opens github')
+                await message.channel.send('$//josh\'s laptop open google - opens google')
+                await message.channel.send('$//josh\'s laptop open stack overflow - opens stackoverflow')
+                await message.channel.send('$//josh\'s laptop open disney+ - opens disney+')
+                await message.channel.send('$//josh\'s laptop open vscode - opens Visual Studio Code')
+                await message.channel.send('$//josh\'s laptop open python - opens python')
+                await message.channel.send('$//josh\'s laptop open android studio - opens android studio')
+                await message.channel.send('$//josh\'s laptop open spotify - opens spotify')
+                await message.channel.send('$//josh\'s laptop open api reference - opens the Discord.py API reference')
+                await message.channel.send('$//josh\'s laptop open discord dev portal - opens the Discord bot development portal')
         
-            if 'flaptop' in query:
+            if 'flynn laptop' in query or 'flynn\'s laptop' in query:
                 
                 #misc
                 await message.channel.send('$//bot3end, //bot3end, //bot3end - will end the program for the laptop bot')
                 
                 #search
-                await message.channel.send('$//laptop gotowebpage {the webpage you want to go to}- this will open the webpage on MY laptop')
-                await message.channel.send('$//laptop google search {search } - will return the first URL from a google search of that thing')
-                await message.channel.send('$//laptop search {search } - will return the first URL from a google search of that thing')
-                await message.channel.send('$//laptop wolfram {search } - will search wolfram fro that thing (currently not working)')
-                await message.channel.send('$//laptop wikipedia {search} - will search wikipedia for that thing and return the first 2 lines of the wikipedia page')
+                await message.channel.send('$//flynn\'s laptop gotowebpage {the webpage you want to go to}- this will open the webpage on MY laptop')
+                await message.channel.send('$//flynn\'s laptop google search {search } - will return the first URL from a google search of that thing')
+                await message.channel.send('$//flynn\'s laptop search {search } - will return the first URL from a google search of that thing')
+                await message.channel.send('$//flynn\'s laptop wolfram {search } - will search wolfram fro that thing (currently not working)')
+                await message.channel.send('$//flynn\'s laptop wikipedia {search} - will search wikipedia for that thing and return the first 2 lines of the wikipedia page')
                 
                 #music
-                await message.channel.send('$//laptop play music - will play music from a pre-determined folder')
-                await message.channel.send('$//laptop press play - will press the play/pause media button')
-                await message.channel.send('$//laptop press pause - will press the play/pause media button')
-                await message.channel.send('$//laptop play random music - will play random music in shuffle from a pre-determined folder')
+                await message.channel.send('$//flynn\'s laptop play music - will play music from a pre-determined folder')
+                await message.channel.send('$//flynn\'s laptop press play - will press the play/pause media button')
+                await message.channel.send('$//flynn\'s laptop press pause - will press the play/pause media button')
+                await message.channel.send('$//flynn\'s laptop play random music - will play random music in shuffle from a pre-determined folder')
                 
                 #email
-                await message.channel.send('$//laptop email {recipient(me/coding)} {content}')
+                await message.channel.send('$//flynn\'s laptop email {recipient(me/coding)} {content}')
 
                 #open
-                await message.channel.send('$//laptop open youtube - opens youtube')
-                await message.channel.send('$//laptop open gmail - opens gmail')
-                await message.channel.send('$//laptop open github - opens github')
-                await message.channel.send('$//laptop open google - opens google')
-                await message.channel.send('$//laptop open stack overflow - opens stackoverflow')
-                await message.channel.send('$//laptop open vscode - opens Visual Studio Code')
-                await message.channel.send('$//laptop open python - opens python')
-                await message.channel.send('$//laptop open spotify - opens spotify')
+                await message.channel.send('$//flynn\'s laptop open youtube - opens youtube')
+                await message.channel.send('$//flynn\'s laptop open gmail - opens gmail')
+                await message.channel.send('$//flynn\'s laptop open github - opens github')
+                await message.channel.send('$//flynn\'s laptop open google - opens google')
+                await message.channel.send('$//flynn\'s laptop open stack overflow - opens stackoverflow')
+                await message.channel.send('$//flynn\'s laptop open vscode - opens Visual Studio Code')
+                await message.channel.send('$//flynn\'s laptop open python - opens python')
+                await message.channel.send('$//flynn\'s laptop open spotify - opens spotify')
         
         if message.content.startswith('//return'):
             query = query.replace("return ", "")

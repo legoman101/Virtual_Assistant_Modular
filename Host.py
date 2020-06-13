@@ -46,13 +46,12 @@ async def on_message(message):
                 await message.channel.send('Listening...')
                 r.adjust_for_ambient_noise(source) #reduce noise
                 audio = r.listen(source) #take voice input from the microphone
-            #printspeak(r.recognize_google(audio)) #to print voice into text
             voiceinput = (r.recognize_google(audio)) #voiceinput = myCommand()
             await message.channel.send('//'+voiceinput)
             if 'abort' in voiceinput:
                 await message.channel.send('//almightykill')
 
-        if '//bot4end' in query or '//bot4abort' in query or '//bot4kill' in query or '//almightykill' in query:
+        if '//bot4end' in query or '//bot4abort' in query or '//bot4kill' in query or '//almightykill' in query or '//almighty kill' in query:
             await message.channel.send( 'Ending Bot')
             await client.close()
 

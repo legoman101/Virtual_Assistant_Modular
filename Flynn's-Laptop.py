@@ -204,7 +204,7 @@ async def on_message(message):
                 os.startfile(SpotifyPath)
 #end of open commands.
 #
-        if '//bot3end' in query or '//bot3abort' in query or '//bot3kill' in query or '//almightykill' in query:
+        if '//bot3end' in query or '//bot3abort' in query or '//bot3kill' in query or '//almightykill' in query or '//almighty kill' in query:
             await message.channel.send( 'Ending Bot')
             await client.close()
 
