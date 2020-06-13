@@ -42,10 +42,12 @@ async def on_message(message):
             r = s_r.Recognizer()
             my_mic = s_r.Microphone(device_index=1) #my device index is 1, you have to put your device index
             with my_mic as source:
-                printspeak("Listening...")
-                await message.channel.send('Listening...')
                 r.adjust_for_ambient_noise(source) #reduce noise
                 audio = r.listen(source) #take voice input from the microphone
+                printspeak("Listening...")
+                await message.channel.send('Listening...')
+                #r.adjust_for_ambient_noise(source) #reduce noise
+                #audio = r.listen(source) #take voice input from the microphone
             #printspeak(r.recognize_google(audio)) #to print voice into text
             voiceinput = (r.recognize_google(audio)) #voiceinput = myCommand()
             await message.channel.send('//'+voiceinput)
