@@ -47,8 +47,8 @@ async def on_message(message):
         return
     query = message.content.lower() # saves query as the message
     if message.content.startswith('//'):
-        if '//server' in query: #any commands aimed at the server bot
-            query = query.replace("//server", "")
+        if 'server' in query: #any commands aimed at the server bot
+            query = query.replace("server", "")
             #Misicalious commands
             if 'hello' in query:
                 await message.channel.send('Hello👋')
@@ -85,7 +85,7 @@ async def on_message(message):
 
             #starting other bots        
         
-        if '//start' in query:
+        if message.content.startswith('//start'):
             query = query.replace("//start", "")
             if 'joshslaptopbot' in query:
                 JoshsLaptop = os.getenv('JoshsLaptop')
@@ -107,7 +107,7 @@ async def on_message(message):
             await message.channel.send( 'Ending Bot')
             await client.close()
                 
-        if '//help' in query:
+        if message.content.startswith('//help'):
             query = query.replace("//help", " ")
 
             if 'all' in query:
@@ -198,19 +198,16 @@ async def on_message(message):
                 await message.channel.send('$//laptop open python - opens python')
                 await message.channel.send('$//laptop open spotify - opens spotify')
         
-        if '//return' in query:
+        if message.content.startswith('//return'):
             query = query.replace("return ", "")
             await message.channel.send(query)
 
-        if '//todolist' in query:
+        if message.content.startswith('//todolist'):
             await message.channel.send('Get wolfram working')
             await message.channel.send('find a way to get a voice input and tunr it into the command')
             await message.channel.send('Create a clear function')
 
-        if '//takecommand' in query:
-            await message.channel.send('//host takecommand')
-
-        if '//clear' in query:
+        if message.content.startswith('//clear'):
             query = query.replace("//clear","")
             await message.channel.send('Clearing messages...')
             await message.delete()

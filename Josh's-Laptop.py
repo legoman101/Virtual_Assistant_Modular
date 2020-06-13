@@ -59,10 +59,9 @@ async def on_message(message):
         return
     query = message.content.lower() # saves query as the message
     if message.content.startswith('//'):
-        query = query.replace("//", "")
-        if 'josh laptop' in query or 'josh\'s laptop' in query:
-            query = query.replace('josh laptop', '')
-            query = query.replace('josh\'s laptop', '')
+        #query = query.replace("//", "")
+        if 'josh' in query or 'josh\'s laptop' in query:
+            
 
 #search commands
             if 'go to web page' in query or 'gotowebpage' in query:
