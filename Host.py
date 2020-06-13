@@ -50,7 +50,7 @@ async def on_message(message):
                 audio = r.listen(source) #take voice input from the microphone
             #printspeak(r.recognize_google(audio)) #to print voice into text
             voiceinput = (r.recognize_google(audio))#voiceinput = myCommand()
-            await message.channel.send('I got: ' +voiceinput)
+            await message.channel.send('//'+voiceinput)
 
         if '//bot4end' in query or '//bot4abort' in query or '//bot4kill' in query or '//almightykill' in query:
             await message.channel.send( 'Ending Bot')

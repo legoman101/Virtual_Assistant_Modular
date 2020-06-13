@@ -59,9 +59,10 @@ async def on_message(message):
         return
     query = message.content.lower() # saves query as the message
     if message.content.startswith('//'):
-        if '//flaptop' in query or '//fcomputer' in query:
-            query = query.replace('//flaptop', '')
-            query = query.replace('//fcomputer', '')
+        query = query.replace("//", "")
+        if 'flynn laptop' in query or 'flynn\'s laptop' in query:
+            query = query.replace('flynn laptop', '')
+            query = query.replace('flynn\'s laptop', '')
 
 #search commands
             if 'go to web page' in query or 'gotowebpage' in query:
@@ -213,8 +214,6 @@ async def on_message(message):
             query = query.replace("//say", "")
             printspeak(query)
 
-        if '//takecommand' in query:
-            await message.channel.send('//host takecommand')
 
 
 
