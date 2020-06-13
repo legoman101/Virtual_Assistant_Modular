@@ -62,3 +62,13 @@ while True:
         word('//takecommand')
         key(Key.enter)
         time.sleep(0.2)
+
+    if(buttons & cwiid.BTN_B):
+        print('You pressed B, press B again to exit, press A to carry on')
+        if(buttons & cwiid.BTN_B):
+            print('okay exiting...')
+            exit(0)
+            sys.exit()
+
+        if(buttons & cwiid.BTN_A):
+            print('caryying on and NOT exiting...')
