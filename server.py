@@ -204,7 +204,7 @@ async def on_message(message):
 
         if message.content.startswith('//todolist'):
             await message.channel.send('Get wolfram working')
-            await message.channel.send('find a way to get a voice input and tunr it into the command')
+            await message.channel.send('find a way to get a voice input and turn it into the command')
             await message.channel.send('Create a clear function')
 
         if message.content.startswith('//clear'):
