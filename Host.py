@@ -11,6 +11,7 @@ import sys # to use the system
 import time #so you can wait
 from googlesearch import search  # to search google for things
 import speech_recognition as s_r
+import pyaudio
 
 load_dotenv()
 

@@ -88,20 +88,24 @@ async def on_message(message):
         if message.content.startswith('//start'):
             query = query.replace("//start", "")
             if 'joshslaptopbot' in query:
-                JoshsLaptop = os.getenv('JoshsLaptop')
-                os.startfile(JoshsLaptop)
-
-            if 'managerbot' in query:
-                ManagerBot = os.getenv('Manager')
-                os.startfile(ManagerBot)
+                os.system('python Joshs-Laptop.py')
+                #await message.channel.send('Joshs-Laptop.py has started. Bot now active.')
 
             if 'hostbot' in query:
-                HostBot = os.getenv('Host')
-                os.startfile(HostBot)
+                os.system('python host.py')
+                #await message.channel.send('host.py has started. Bot now active.')
 
+            ''' #commented this bit out as only one bot is being used for testing.
             if 'flynnslaptopbot' in query:
-                FlynnsLaptop = os.getenv('FlynnsLaptop')
-                os.startfile(FlynnsLaptop)
+                os.system('python Flynns-Laptop.py')
+                #await message.channel.send('Flynns-Laptop.py has started. Bot now active.')
+            '''
+
+            if 'all' in query:
+                os.system('python Joshs-Laptop.py')
+                os.system('python host.py')
+                #os.system('python Flynns-Laptop.py')
+                #await message.channel.send('Flynns-Laptop.py & Joshs-Laptop.py & host.py have started. Bots are now active.')
 
         if '//bot1end' in query or '//bot1abort' in query or '//bot1kill' in query or '//almightykill' in query or '//almighty kill' in query:
             await message.channel.send( 'Ending Bot')
@@ -167,6 +171,7 @@ async def on_message(message):
                 await message.channel.send('$//josh\'s laptop open api reference - opens the Discord.py API reference')
                 await message.channel.send('$//josh\'s laptop open discord dev portal - opens the Discord bot development portal')
         
+            ''' #commented this bit out as only one bot is being used for testing.
             if 'flynn laptop' in query or 'flynn\'s laptop' in query:
                 
                 #misc
@@ -197,18 +202,19 @@ async def on_message(message):
                 await message.channel.send('$//flynn\'s laptop open vscode - opens Visual Studio Code')
                 await message.channel.send('$//flynn\'s laptop open python - opens python')
                 await message.channel.send('$//flynn\'s laptop open spotify - opens spotify')
-        
+        '''
+
         if message.content.startswith('//return'):
             query = query.replace("return ", "")
             await message.channel.send(query)
 
         if message.content.startswith('//todolist'):
+            await message.channel.send('Change it so that rather than using the Wiimote-typing.py script you use a button attached to a pi, with the sccripts running off of the pi.')
             await message.channel.send('Get wolfram working')
-            await message.channel.send('find a way to get a voice input and turn it into the command')
+            await message.channel.send('Fix the //start function for the hostbot')
             await message.channel.send('Create a clear function')
 
         if message.content.startswith('//clear'):
-            query = query.replace("//clear","")
             await message.channel.send('Clearing messages...')
             await message.delete()
             

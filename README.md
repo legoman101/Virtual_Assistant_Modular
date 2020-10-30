@@ -2,8 +2,8 @@
 This is a collection of Dicord bots
 
 Each one does a different role:
- ```Josh's-Laptop.py``` = runs commands for on Josh's-Laptop.
- ```Flynn's-Laptop.py``` = runs commands for on Flynn's-Laptop.
+ ```Joshs-Laptop.py``` = runs commands for on Josh's-Laptop.
+ ```Flynns-Laptop.py``` = runs commands for on Flynn's-Laptop.
  ```Server.py``` = runs the commands that aren't attached to a device.
  ```Host.py``` = takes a voice input and turns it into the commands to be put onto the server.
 
@@ -47,19 +47,12 @@ PythonPath = \\*\\*\\*\\*\\*\\IDLE (Python 3.8 32-bit).lnk
 SpotifyPath = \\*\\*\\*\\*\\*\\Spotify.lnk
 AndroidStudioPath = \\*\\*\\*\\*\\*\\Android Studio.lnk
 
-#botPaths
-JoshsLaptop = \\*\\*\\*\\*\\*\\Josh's-Laptop.py
-FlynnsLaptop = \\*\\*\\*\\*\\*\\Flynn's-Laptop.py
-Manager = \\*\\*\\*\\*\\*\\manager.py
-Server =  \\*\\*\\*\\*\\*\\server.py
-Host = \\*\\*\\*\\*\\*\\Host.py
-
 
 
 ```
 
 Run: ```pip install -r requirements.txt``` to pip install everything you need.
-Run: ```server.py``` and then go to your discord guild/server and type ```//start Flynn's-Laptop``` and ```//start Flynn's-Laptop```
-OR: run them all at the same time.
+Run: ```server.py``` and then go to your discord guild/server and type ```//start all``` to start all of the bots or,  ```//start [bot name]``` for certain bots.
+OR: run them all at the same time from the command line or straight from the python shell.
 
 NOTE: when running the ```Wiimote-typing.py``` script you need to use the command ```python Wiimote-typing.py``` and not ```python3```
