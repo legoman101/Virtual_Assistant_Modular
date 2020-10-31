@@ -216,6 +216,7 @@ async def on_message(message):
 #
         if '//bot2end' in query or '//bot2abort' in query or '//bot2kill' in query or '//almightykill' in query or '//almighty kill' in query:
             await message.channel.send( 'Ending Bot')
+            print(f'{client.user.name} has disconnected from Discord')
             await client.close()
 
         if '//say' in query:

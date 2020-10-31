@@ -89,26 +89,27 @@ async def on_message(message):
             query = query.replace("//start", "")
             if 'joshslaptopbot' in query:
                 os.system('python Joshs-Laptop.py')
-                #await message.channel.send('Joshs-Laptop.py has started. Bot now active.')
+                print('Joshs-Laptop.py has started. Bot now active.')
 
             if 'hostbot' in query:
                 os.system('python host.py')
-                #await message.channel.send('host.py has started. Bot now active.')
+                print('host.py has started. Bot now active.')
 
             ''' #commented this bit out as only one bot is being used for testing.
             if 'flynnslaptopbot' in query:
                 os.system('python Flynns-Laptop.py')
-                #await message.channel.send('Flynns-Laptop.py has started. Bot now active.')
+                print('Flynns-Laptop.py has started. Bot now active.')
             '''
 
             if 'all' in query:
                 os.system('python Joshs-Laptop.py')
                 os.system('python host.py')
                 #os.system('python Flynns-Laptop.py')
-                #await message.channel.send('Flynns-Laptop.py & Joshs-Laptop.py & host.py have started. Bots are now active.')
+                print('Flynns-Laptop.py & Joshs-Laptop.py & host.py have started. Bots are now active.')
 
         if '//bot1end' in query or '//bot1abort' in query or '//bot1kill' in query or '//almightykill' in query or '//almighty kill' in query:
             await message.channel.send( 'Ending Bot')
+            print(f'{client.user.name} has disconnected from Discord')
             await client.close()
                 
         if message.content.startswith('//help'):
