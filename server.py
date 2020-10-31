@@ -102,10 +102,8 @@ async def on_message(message):
             '''
 
             if 'all' in query:
-                os.system('python Joshs-Laptop.py')
-                os.system('python host.py')
-                #os.system('python Flynns-Laptop.py')
-                print('Flynns-Laptop.py & Joshs-Laptop.py & host.py have started. Bots are now active.')
+                os.startfile('open-all-bots.bat')
+                print('All bots have started. Bots are now active.')
 
         if '//bot1end' in query or '//bot1abort' in query or '//bot1kill' in query or '//almightykill' in query or '//almighty kill' in query:
             await message.channel.send( 'Ending Bot')
@@ -210,7 +208,7 @@ async def on_message(message):
             await message.channel.send(query)
 
         if message.content.startswith('//todolist'):
-            await message.channel.send('Change it so that rather than using the Wiimote-typing.py script you use a button attached to a pi, with the sccripts running off of the pi.')
+            await message.channel.send('Change it so that rather than using the Wiimote-typing.py script you use a button attached to a pi, with the scripts running off of the pi.')
             await message.channel.send('Get wolfram working')
             await message.channel.send('Fix the //start function for the hostbot')
             await message.channel.send('Create a clear function')

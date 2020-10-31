@@ -30,7 +30,7 @@ query = "" #query = nothing
 #speech
 engine = pyttsx3.init('sapi5')
 
-MASTER = 'Josh'
+MASTER = os.getenv('MASTER') #name of master
 
 #wolfram setup
 wolframappid = os.getenv('wolframappid')
@@ -175,7 +175,7 @@ async def on_message(message):
 
             elif 'open discord dev portal' in query or 'open discorddevportal' in query:
                 await message.channel.send('Opening Discord Development Portal...')
-                gotowebpage('https://discord.com/developers/applications/718527530935779438/bot')
+                gotowebpage('https://discord.com/developers/applications')
 
             elif 'open gmail' in query: #open gmail
                 await message.channel.send('Opening Gmail...')
@@ -183,7 +183,11 @@ async def on_message(message):
 
             elif 'open github' in query or 'open git hub' in query:
                 await message.channel.send('Opening GitHub...')
-                gotowebpage('github.com')
+                gotowebpage('www.github.com/legoman101')
+
+            elif 'open my website' in query:
+                await message.channel.send('Opening Legoman101 website...')
+                gotowebpage('Legoman101.github.io')
 
             elif 'open google' in query: #open google
                 await message.channel.send('Opening Google...')

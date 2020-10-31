@@ -17,10 +17,14 @@ you need to create 4 bots: (if you want to make these a bit nicer, then you can 
 - Host
 - Server
 
+{You can change the names, but if you do, then you will need to change the names in all the scripts aswell.}
+
 Get the four ID Tokens and put them into a file named ```.env```
-The format of this is:
+The format of this file is:
 ```
 # .env
+
+MASTER = *#*
 
 #Discord
 DISCORDMANAGER_TOKEN = *#*
@@ -34,16 +38,16 @@ DISCORD_GUILD = *#*
 wolframappid = *#*
 
 #email
-Your_Username = *#*
+Your_Username = *#* 
 Codingemail = *#*
 Normalemail = *#*
 Your_Password = *#*
 
-#Paths
+#Paths (I found that linking to the start menu shortcuts are easiest)
 songs_dir = \\*\\*\\*\\*\\*\\Music # for music playing
 ChromePath = C:/*/*/*/*/chrome.exe %s
 VsCodePath = \\*\\*\\*\\*\\*\\Visual Studio Code.lnk
-PythonPath = \\*\\*\\*\\*\\*\\IDLE (Python 3.8 32-bit).lnk
+PythonPath = \\*\\*\\*\\*\\*\\IDLE (Python 3.8 64-bit).lnk
 SpotifyPath = \\*\\*\\*\\*\\*\\Spotify.lnk
 AndroidStudioPath = \\*\\*\\*\\*\\*\\Android Studio.lnk
 
@@ -52,7 +56,7 @@ AndroidStudioPath = \\*\\*\\*\\*\\*\\Android Studio.lnk
 ```
 
 Run: ```pip install -r requirements.txt``` to pip install everything you need.
-Run: ```server.py``` and then go to your discord guild/server and type ```//start all``` to start all of the bots or,  ```//start [bot name]``` for certain bots.
+Run: ```python server.py``` and then go to your discord guild/server and type ```//start all``` to start all of the bots or,  ```//start [bot name]``` for certain bots.
 OR: run them all at the same time from the command line or straight from the python shell.
 
 NOTE: when running the ```Wiimote-typing.py``` script you need to use the command ```python Wiimote-typing.py``` and not ```python3```
