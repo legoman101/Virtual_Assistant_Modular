@@ -15,6 +15,8 @@ import pynput
 import google # to search google for things
 from dotenv import load_dotenv
 
+load_dotenv()
+
 wolframappid = os.getenv('wolframappid')
 #setup pynput
 pynputkeyboard = Controller()
