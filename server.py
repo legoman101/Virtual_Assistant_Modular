@@ -95,12 +95,6 @@ async def on_message(message):
                 os.system('python host.py')
                 print('host.py has started. Bot now active.')
 
-            ''' #commented this bit out as only one bot is being used for testing.
-            if 'flynnslaptopbot' in query:
-                os.system('python Flynns-Laptop.py')
-                print('Flynns-Laptop.py has started. Bot now active.')
-            '''
-
             if 'all' in query:
                 os.startfile('open-all-bots.bat')
                 print('All bots have started. Bots are now active.')
@@ -116,9 +110,8 @@ async def on_message(message):
             if 'all' in query:
                 await message.channel.send('$//takecommand - will take your voice input')
                 await message.channel.send('$//jlaptop will mean you are interfacing with the laptop set of code {type //help jlaptop for more help}')
-                await message.channel.send('$//flaptop will mean you are interfacing with the laptop set of code {type //help flaptop for more help}')
                 await message.channel.send('$//server will mean you are interfacing with the server set of code {type //help server for more help}')
-                await message.channel.send('$//bot{1/2/3}end, //bot{1/2/3}kill or //bot{1/2/3}abort will close the discord bot -[bot1 = server, bot2 = JLaptop, bot3 = FLaptop] {WARNING: this will mean that you will have to reload the bot with the code}')
+                await message.channel.send('$//bot{1/2/3}end, //bot{1/2/3}kill or //bot{1/2/3}abort will close the discord bot -[bot1 = server, bot2 = JLaptop, bot3 = host] {WARNING: this will mean that you will have to reload the bot with the code}')
                 await message.channel.send('$//say will make my laptop say what ever you type after')
                 await message.channel.send('$//help will list all of the commands (this list)')
                 await message.channel.send('$//almightykill will close all of the bots- {WARNING: this will mean that you will have to reload the bot with the code}')
@@ -132,7 +125,7 @@ async def on_message(message):
                 await message.channel.send('$//server what\'s up - will return how the virtual assistant is feeling today')
                 await message.channel.send('$//server how are you - will return how the virtual assistant is feeling today')
                 await message.channel.send('$//bot1end, //bot1kill, //bot1abort - will end the program for the server bot')
-                await message.channel.send('$//start {joshslaptopbot/flynnslaptopbot/managerbot/hostbot} - will start the python script for the appropriate bot [WARNING: make sure you keep the python tab OPEN]')
+                await message.channel.send('$//start {joshslaptopbot/managerbot/hostbot} - will start the python script for the appropriate bot [WARNING: make sure you keep the python tab OPEN]')
                 await message.channel.send('$//clear {x amount of messages} - deletes x amount of messages')
                 
             if 'josh laptop' in query or 'josh\'s laptop' in query:
@@ -170,39 +163,6 @@ async def on_message(message):
                 await message.channel.send('$//josh\'s laptop open api reference - opens the Discord.py API reference')
                 await message.channel.send('$//josh\'s laptop open discord dev portal - opens the Discord bot development portal')
         
-            ''' #commented this bit out as only one bot is being used for testing.
-            if 'flynn laptop' in query or 'flynn\'s laptop' in query:
-                
-                #misc
-                await message.channel.send('$//bot3end, //bot3end, //bot3end - will end the program for the laptop bot')
-                
-                #search
-                await message.channel.send('$//flynn\'s laptop gotowebpage {the webpage you want to go to}- this will open the webpage on MY laptop')
-                await message.channel.send('$//flynn\'s laptop google search {search } - will return the first URL from a google search of that thing')
-                await message.channel.send('$//flynn\'s laptop search {search } - will return the first URL from a google search of that thing')
-                await message.channel.send('$//flynn\'s laptop wolfram {search } - will search wolfram fro that thing (currently not working)')
-                await message.channel.send('$//flynn\'s laptop wikipedia {search} - will search wikipedia for that thing and return the first 2 lines of the wikipedia page')
-                
-                #music
-                await message.channel.send('$//flynn\'s laptop play music - will play music from a pre-determined folder')
-                await message.channel.send('$//flynn\'s laptop press play - will press the play/pause media button')
-                await message.channel.send('$//flynn\'s laptop press pause - will press the play/pause media button')
-                await message.channel.send('$//flynn\'s laptop play random music - will play random music in shuffle from a pre-determined folder')
-                
-                #email
-                await message.channel.send('$//flynn\'s laptop email {recipient(me/coding)} {content}')
-
-                #open
-                await message.channel.send('$//flynn\'s laptop open youtube - opens youtube')
-                await message.channel.send('$//flynn\'s laptop open gmail - opens gmail')
-                await message.channel.send('$//flynn\'s laptop open github - opens github')
-                await message.channel.send('$//flynn\'s laptop open google - opens google')
-                await message.channel.send('$//flynn\'s laptop open stack overflow - opens stackoverflow')
-                await message.channel.send('$//flynn\'s laptop open vscode - opens Visual Studio Code')
-                await message.channel.send('$//flynn\'s laptop open python - opens python')
-                await message.channel.send('$//flynn\'s laptop open spotify - opens spotify')
-        '''
-
         if message.content.startswith('//return'):
             query = query.replace("return ", "")
             await message.channel.send(query)

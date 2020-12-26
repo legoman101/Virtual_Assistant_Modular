@@ -183,11 +183,11 @@ async def on_message(message):
 
             elif 'open github' in query or 'open git hub' in query:
                 await message.channel.send('Opening GitHub...')
-                gotowebpage('www.github.com/legoman101')
+                gotowebpage('www.github.com/TechyYodaCoder')
 
             elif 'open my website' in query:
-                await message.channel.send('Opening Legoman101 website...')
-                gotowebpage('Legoman101.github.io')
+                await message.channel.send('Opening TechyYodaCoder website...')
+                gotowebpage('TechyYodaCoder.github.io')
 
             elif 'open google' in query: #open google
                 await message.channel.send('Opening Google...')
